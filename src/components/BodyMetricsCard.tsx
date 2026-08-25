@@ -50,12 +50,15 @@ export default function BodyMetricsCard({
 
   // Circumference chart data
   const circumData = [
-    { name: 'Vòng Ngực', value: latest.chest, initial: initial.chest, unit: 'cm' },
-    { name: 'Vòng Eo', value: latest.waist, initial: initial.waist, unit: 'cm' },
-    { name: 'Vòng Mông', value: latest.hips, initial: initial.hips, unit: 'cm' },
-    { name: 'Vòng Đùi', value: latest.thigh, initial: initial.thigh, unit: 'cm' },
-    ...(latest.arm ? [{ name: 'Bắp Tay', value: latest.arm, initial: initial.arm || latest.arm, unit: 'cm' }] : []),
-  ];
+    const circumData = [
+  { name: 'Vòng Ngực', value: latest.chest, unit: 'cm' },
+  { name: 'Vòng Eo', value: latest.waist, unit: 'cm' },
+  { name: 'Vòng Mông', value: latest.hips, unit: 'cm' },
+  { name: 'Vòng Đùi', value: latest.thigh, unit: 'cm' },
+  { name: 'Vòng bắp tay', value: latest.arm, unit: 'cm' },
+  { name: 'Bụng', value: latest.abdomen, unit: 'cm' }
+];
+ 
 
   return (
     <div className="space-y-6">
